@@ -42,4 +42,10 @@ class Shape {
     }
   }
 
-  module.exports = Shape;
+  module.exports = {
+    Shape,
+    Circle,
+    Triangle,
+    Square
+  };
+  

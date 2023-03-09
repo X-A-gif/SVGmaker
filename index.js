@@ -1,5 +1,8 @@
 const inquirer = require('inquirer');
+const generateLogoSvg = require('./assets/generate'); 
 const fs = require('fs');
+
+
 
 inquirer
   .prompt([
@@ -44,7 +47,7 @@ inquirer
     const logoShape = answers.shape;
     const logoShapeColor = answers.shapeColor;
 
-    // const logoSvg = generateLogoSvg(logoText, logoTextColor, logoShape, logoShapeColor);
+    const logoSvg = generateLogoSvg(logoText, logoTextColor, logoShape, logoShapeColor);
 
     fs.writeFile('logo.svg', logoSvg, (err) => {
       if (err) {
